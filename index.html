@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jaydeep Mamanpara – Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Top-Right Buttons -->
+  <button id="lang-toggle" onclick="toggleLanguage()">English</button>
+  <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+
   <header>
     <img src="assets/banner.png" alt="Banner" class="banner" />
     <h1>Jaydeep Mamanpara</h1>
     <p>Product Designer | VR & CAD Expert | Mechatronics Engineer</p>
     <nav>
-      <button onclick="showSection('about/Über mich')">About</button>
-      <button onclick="showSection('experience/Erfahrung')">Experience</button>
-      <button onclick="showSection('projects/Projekte')">Projects</button>
-      <!-- Place this directly inside <body>, before <header> -->
-      <button id="lang-toggle" onclick="toggleLanguage()">English</button>
-      <!-- 🌙 Theme Toggle Button -->
-      <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+      <button onclick="showSection('about')">About</button>
+      <button onclick="showSection('experience')">Experience</button>
+      <button onclick="showSection('projects')">Projects</button>
     </nav>
   </header>
+
   <main>
-    <section id="about" class="content active lang-en">
+    <section id="about" class="content lang-en">
       <h2>About Me</h2>
       <p>I am a Mechatronics student with strong experience in CAD design, VR simulation, and digital prototyping. Skilled in SolidWorks, Unity, Blender, FEM, and Python.</p>
       <a href="resume.pdf" download class="btn">📄 Download CV</a>
@@ -34,6 +35,7 @@
       <p>Ich bin Mechatronik-Student mit Erfahrung in CAD-Design, VR-Simulation und digitalem Prototyping. Kenntnisse in SolidWorks, Unity, Blender, FEM und Python.</p>
       <a href="resume.pdf" download class="btn">📄 Lebenslauf herunterladen</a>
     </section>
+
     <section id="experience" class="content lang-en">
       <h2>Experience</h2>
       <p><strong>Torq Auto Pvt. Ltd.</strong> – Product design, visual documentation, and production cost optimization.</p>
@@ -42,6 +44,7 @@
       <h2>Erfahrung</h2>
       <p><strong>Torq Auto Pvt. Ltd.</strong> – Produktdesign, visuelle Dokumentation und Kostenoptimierung.</p>
     </section>
+
     <section id="projects" class="content lang-en">
       <h2>Projects</h2>
       <h3>VR Hardening Oven (Unity)</h3>
@@ -61,6 +64,7 @@
       <p>Modularer robotischer Greifer mit SolidWorks und additiver Fertigung entwickelt.</p>
     </section>
   </main>
+
   <footer>
     <p>📧 jaydeepm2604@gmail.com | 🌐 GitHub: @Jaydeepmj</p>
     <p>
@@ -69,6 +73,7 @@
       <i class="fab fa-unity"></i> Unity
     </p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

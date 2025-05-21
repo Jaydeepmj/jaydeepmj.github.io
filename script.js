@@ -11,7 +11,7 @@ function showSection(id) {
 }
 
 function toggleLanguage() {
-  currentLang = currentLang === "de" ? "en" : "ede";
+  currentLang = currentLang === "de" ? "en" : "de";
   let active = document.querySelector("main .content.active");
   if (active) showSection(active.id);
 

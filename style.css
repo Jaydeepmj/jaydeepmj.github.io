@@ -31,8 +31,8 @@ body.light-mode nav button:hover {
 
 body.light-mode #lang-toggle,
 body.light-mode #theme-toggle {
-  background-color: #444;
-  color: white;
+  background-color: #e0e0e0;
+  color: #111;
 }
 
 body.light-mode .btn {

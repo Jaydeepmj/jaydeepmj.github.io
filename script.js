@@ -1,4 +1,4 @@
-let currentLang = "de";
+let currentLang = "de"; // ✅ Default language is now German
 
 function showSection(id) {
   document.querySelectorAll("main .content").forEach(section => {
@@ -11,16 +11,16 @@ function showSection(id) {
 }
 
 function toggleLanguage() {
-  currentLang = currentLang === "de" ? "en" : "de";
+  currentLang = currentLang === "en" ? "de" : "en";
   let active = document.querySelector("main .content.active");
   if (active) showSection(active.id);
 
-  // Update the toggle button text
   const toggleButton = document.getElementById("lang-toggle");
-  toggleButton.textContent = currentLang === "de" ? "English" : "Deutsch";
+  toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
 }
 
-// Show the default section on page load
 window.onload = function () {
   showSection("about");
+  const toggleButton = document.getElementById("lang-toggle");
+  toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
 };

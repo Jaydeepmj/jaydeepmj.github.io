@@ -1,15 +1,19 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f7f9fc;
+  background: #1a1a1d;
+  color: #f0f0f0;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.banner {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
+header, footer {
+  background-color: #272727;
+  padding: 20px;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav button {
@@ -17,50 +21,57 @@ nav button {
   padding: 10px 20px;
   font-weight: bold;
   border: none;
-  background-color: #34495e;
+  background-color: #444;
+  color: #f0f0f0;
   transition: all 0.3s ease;
+  border-radius: 8px;
 }
 
 nav button:hover {
   background-color: #007acc;
-  color: white;
   transform: scale(1.05);
   cursor: pointer;
-}
-
-main .content {
-  display: none;
-  padding: 20px;
-}
-
-main .active {
-  display: block;
 }
 
 .project-img {
   width: 60%;
   max-width: 500px;
-  margin: 10px auto;
-}
-
-footer {
-  margin-top: 40px;
-  padding: 20px;
-  background: #eee;
-  font-size: 14px;
+  margin: 20px auto;
+  border: 2px solid #333;
+  border-radius: 10px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
   background-color: #007acc;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  display: inline-block;
 }
 
 .btn:hover {
   background-color: #005fa3;
+}
+
+/* ✅ Floating toggle */
+#lang-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#lang-toggle:hover {
+  background-color: #00aaff;
+  transform: scale(1.05);
 }

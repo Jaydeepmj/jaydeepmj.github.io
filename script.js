@@ -1,4 +1,4 @@
-let currentLang = "de"; // ✅ Default language is now German
+let currentLang = "de"; // Start in German
 
 function showSection(id) {
   document.querySelectorAll("main .content").forEach(section => {
@@ -24,3 +24,17 @@ window.onload = function () {
   const toggleButton = document.getElementById("lang-toggle");
   toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
 };
+
+function toggleTheme() {
+  const body = document.body;
+  const themeToggle = document.getElementById("theme-toggle");
+
+  body.classList.toggle("light-mode");
+
+  if (body.classList.contains("light-mode")) {
+    themeToggle.textContent = "🌙";
+  } else {
+    themeToggle.textContent = "☀️";
+  }
+}
+

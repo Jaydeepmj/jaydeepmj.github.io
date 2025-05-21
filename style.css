@@ -1,17 +1,21 @@
+/* 1. Global Style and Background */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #1a1a1d;
+  background: linear-gradient(120deg, #1a1a1d, #2e2e33);
   color: #f0f0f0;
   margin: 0;
   padding: 0;
   text-align: center;
+  overflow-x: hidden;
 }
 
+/* 2. Header and Footer Styling */
 header, footer {
   background-color: #272727;
   padding: 20px;
 }
 
+/* 3. Navigation Buttons */
 nav {
   margin-top: 10px;
 }
@@ -33,14 +37,39 @@ nav button:hover {
   cursor: pointer;
 }
 
+/* 4. Section Visibility Logic */
+main .content {
+  display: none;
+  padding: 20px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+main .active {
+  display: block;
+}
+
+/* 5. Project Image Styling */
 .project-img {
   width: 60%;
   max-width: 500px;
   margin: 20px auto;
   border: 2px solid #333;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
+.project-img:hover {
+  transform: scale(1.03);
+}
+
+/* 6. Footer Appearance */
+footer {
+  margin-top: 40px;
+  background: #222;
+  font-size: 14px;
+}
+
+/* 7. CV Download Button */
 .btn {
   background-color: #007acc;
   color: white;
@@ -49,15 +78,16 @@ nav button:hover {
   padding: 10px 20px;
   margin-top: 15px;
   display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #005fa3;
 }
 
-/* ✅ Floating toggle */
+/* 8. Language Toggle Styling */
 #lang-toggle {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 20px;
   background-color: #007acc;
@@ -74,4 +104,16 @@ nav button:hover {
 #lang-toggle:hover {
   background-color: #00aaff;
   transform: scale(1.05);
+}
+
+/* 9. Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

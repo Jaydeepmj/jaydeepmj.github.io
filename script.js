@@ -1,4 +1,4 @@
-let currentLang = "de"; // Start in German
+let currentLang = "de";
 
 function showSection(id) {
   document.querySelectorAll("main .content").forEach(section => {
@@ -19,12 +19,6 @@ function toggleLanguage() {
   toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
 }
 
-window.onload = function () {
-  showSection("about");
-  const toggleButton = document.getElementById("lang-toggle");
-  toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
-};
-
 function toggleTheme() {
   const body = document.body;
   const themeToggle = document.getElementById("theme-toggle");
@@ -38,3 +32,8 @@ function toggleTheme() {
   }
 }
 
+window.onload = function () {
+  showSection("about");
+  const toggleButton = document.getElementById("lang-toggle");
+  toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
+};

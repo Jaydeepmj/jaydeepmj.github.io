@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaydeep Mamanpara – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/banner.png" alt="Banner" class="banner" />
+    <h1>Jaydeep Mamanpara</h1>
+    <p>Product Designer | VR & CAD Expert | Mechatronics Engineer</p>
+    <nav>
+      <button onclick="showSection('about')">About</button>
+      <button onclick="showSection('experience')">Experience</button>
+      <button onclick="showSection('projects')">Projects</button>
+      <button onclick="toggleLanguage()">DE/EN</button>
+    </nav>
+  </header>
+  <main>
+    <section id="about" class="content active lang-en">
+      <h2>About Me</h2>
+      <p>I am a Mechatronics student with strong experience in CAD design, VR simulation, and digital prototyping. Skilled in SolidWorks, Unity, Blender, FEM, and Python.</p>
+    </section>
+    <section id="about" class="content lang-de">
+      <h2>Über mich</h2>
+      <p>Ich bin Mechatronik-Student mit Erfahrung in CAD-Design, VR-Simulation und digitalem Prototyping. Kenntnisse in SolidWorks, Unity, Blender, FEM und Python.</p>
+    </section>
+    <section id="experience" class="content lang-en">
+      <h2>Experience</h2>
+      <p><strong>Torq Auto Pvt. Ltd.</strong> – Product design, visual documentation, and production cost optimization.</p>
+    </section>
+    <section id="experience" class="content lang-de">
+      <h2>Erfahrung</h2>
+      <p><strong>Torq Auto Pvt. Ltd.</strong> – Produktdesign, visuelle Dokumentation und Kostenoptimierung.</p>
+    </section>
+    <section id="projects" class="content lang-en">
+      <h2>Projects</h2>
+      <h3>VR Hardening Oven (Unity)</h3>
+      <img src="assets/hardening-oven.png" alt="Hardening Oven" class="project-img" />
+      <p>Created an interactive VR module of an industrial hardening oven using Unity and Blender.</p>
+      <h3>Robotic Gripper (SolidWorks)</h3>
+      <img src="assets/gripper.png" alt="Gripper" class="project-img" />
+      <p>Designed a modular robotic gripper using SolidWorks and additive manufacturing techniques.</p>
+    </section>
+    <section id="projects" class="content lang-de">
+      <h2>Projekte</h2>
+      <h3>VR-Härteofen (Unity)</h3>
+      <img src="assets/hardening-oven.png" alt="Härteofen" class="project-img" />
+      <p>Erstellung eines interaktiven VR-Moduls eines industriellen Härteofens mit Unity und Blender.</p>
+      <h3>Roboter-Greifer (SolidWorks)</h3>
+      <img src="assets/gripper.png" alt="Greifer" class="project-img" />
+      <p>Modularer robotischer Greifer mit SolidWorks und additiver Fertigung entwickelt.</p>
+    </section>
+  </main>
+  <footer>
+    <p>📧 jaydeepm2604@gmail.com | 🌐 GitHub: @Jaydeepmj</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-let currentLang = "en";
+let currentLang = "de";
 
 function showSection(id) {
   document.querySelectorAll("main .content").forEach(section => {
@@ -11,13 +11,13 @@ function showSection(id) {
 }
 
 function toggleLanguage() {
-  currentLang = currentLang === "en" ? "de" : "en";
+  currentLang = currentLang === "de" ? "en" : "ede";
   let active = document.querySelector("main .content.active");
   if (active) showSection(active.id);
 
   // Update the toggle button text
   const toggleButton = document.getElementById("lang-toggle");
-  toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
+  toggleButton.textContent = currentLang === "de" ? "English" : "Deutsch";
 }
 
 // Show the default section on page load

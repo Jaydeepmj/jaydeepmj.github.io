@@ -36,4 +36,6 @@ window.onload = function () {
   showSection("about");
   const toggleButton = document.getElementById("lang-toggle");
   toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
+  document.getElementById("theme-toggle").textContent =
+  document.body.classList.contains("light-mode") ? "🌙" : "☀️";
 };

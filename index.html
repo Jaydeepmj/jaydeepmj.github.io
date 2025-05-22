@@ -18,9 +18,9 @@
     <h1>Jaydeep Mamanpara</h1>
     <p>Product Designer | VR & CAD Expert | Mechatronics Engineer</p>
     <nav>
-      <button onclick="showSection('about')">About</button>
-      <button onclick="showSection('experience')">Experience</button>
-      <button onclick="showSection('projects')">Projects</button>
+      <button id="btn-about" onclick="showSection('about')">Über mich</button>
+      <button id="btn-experience" onclick="showSection('experience')">Erfahrung</button>
+      <button id="btn-projects" onclick="showSection('projects')">Projekte</button>
     </nav>
   </header>
 
@@ -28,50 +28,41 @@
     <section id="about" class="content lang-en">
       <h2>About Me</h2>
       <p>I am a Mechatronics student with strong experience in CAD design, VR simulation, and digital prototyping. Skilled in SolidWorks, Unity, Blender, FEM, and Python.</p>
-      <a href="resume.pdf" download class="btn">📄 Download CV</a>
+      <a href="lebenslauf.pdf" download class="btn">📄 Download CV</a>
     </section>
     <section id="about" class="content lang-de">
       <h2>Über mich</h2>
       <p>Ich bin Mechatronik-Student mit Erfahrung in CAD-Design, VR-Simulation und digitalem Prototyping. Kenntnisse in SolidWorks, Unity, Blender, FEM und Python.</p>
-      <a href="resume.pdf" download class="btn">📄 Lebenslauf herunterladen</a>
+      <a href="lebenslauf.pdf" download class="btn">📄 Lebenslauf herunterladen</a>
     </section>
 
     <section id="experience" class="content lang-en">
       <h2>Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-year">2023</div>
-          <div class="timeline-content">
-            <h3>Product Designer at Torq Auto</h3>
-            <p>Designed CAD models, created visual documentation, optimized production costs.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2022</div>
-          <div class="timeline-content">
-            <h3>Robotic Gripper Project</h3>
-            <p>Built modular gripper using SolidWorks and FEM analysis for design validation.</p>
-          </div>
-        </div>
-      </div>
+      <h3>Torq Auto Pvt. Ltd.</h3>
+      <p>Product design, visual documentation, and production cost optimization.</p>
+    </section>
+    <section id="experience" class="content lang-de">
+      <h2>Erfahrung</h2>
+      <h3>Torq Auto Pvt. Ltd.</h3>
+      <p>Produktdesign, visuelle Dokumentation und Kostenoptimierung.</p>
     </section>
 
     <section id="projects" class="content lang-en">
       <h2>Projects</h2>
       <h3>VR Hardening Oven (Unity)</h3>
-      <img src="assets/hardening-oven.png" alt="Hardening Oven" class="project-img" />
+      <img src="assets/hardening-oven.png" alt="Hardening Oven" class="project-img oven-img" />
       <p>Created an interactive VR module of an industrial hardening oven using Unity and Blender.</p>
       <h3>Robotic Gripper (SolidWorks)</h3>
-      <img src="assets/gripper.png" alt="Gripper" class="project-img" />
+      <img src="assets/gripper.png" alt="Gripper" class="project-img gripper-img" />
       <p>Designed a modular robotic gripper using SolidWorks and additive manufacturing techniques.</p>
     </section>
     <section id="projects" class="content lang-de">
       <h2>Projekte</h2>
       <h3>VR-Härteofen (Unity)</h3>
-      <img src="assets/hardening-oven.png" alt="Härteofen" class="project-img" />
+      <img src="assets/hardening-oven.png" alt="Härteofen" class="project-img oven-img" />
       <p>Erstellung eines interaktiven VR-Moduls eines industriellen Härteofens mit Unity und Blender.</p>
       <h3>Roboter-Greifer (SolidWorks)</h3>
-      <img src="assets/gripper.png" alt="Greifer" class="project-img" />
+      <img src="assets/gripper.png" alt="Greifer" class="project-img gripper-img" />
       <p>Modularer robotischer Greifer mit SolidWorks und additiver Fertigung entwickelt.</p>
     </section>
   </main>

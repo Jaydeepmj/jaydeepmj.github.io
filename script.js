@@ -12,12 +12,32 @@ function showSection(id) {
 
 function toggleLanguage() {
   currentLang = currentLang === "en" ? "de" : "en";
-  let active = document.querySelector("main .content.active");
+  const active = document.querySelector("main .content.active");
   if (active) showSection(active.id);
 
-  const toggleButton = document.getElementById("lang-toggle");
-  toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
+  // Language toggle label
+  document.getElementById("lang-toggle").textContent =
+    currentLang === "en" ? "Deutsch" : "English";
+
+  // Nav button labels
+  const labels = {
+    en: {
+      about: "About",
+      experience: "Experience",
+      projects: "Projects"
+    },
+    de: {
+      about: "Über mich",
+      experience: "Erfahrung",
+      projects: "Projekte"
+    }
+  };
+
+  document.getElementById("btn-about").textContent = labels[currentLang].about;
+  document.getElementById("btn-experience").textContent = labels[currentLang].experience;
+  document.getElementById("btn-projects").textContent = labels[currentLang].projects;
 }
+
 
 function toggleTheme() {
   const body = document.body;
@@ -38,4 +58,5 @@ window.onload = function () {
   toggleButton.textContent = currentLang === "en" ? "Deutsch" : "English";
   document.getElementById("theme-toggle").textContent =
   document.body.classList.contains("light-mode") ? "🌙" : "☀️";
+
 };

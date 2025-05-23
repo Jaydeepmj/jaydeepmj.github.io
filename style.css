@@ -1,55 +1,13 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, #1a1a1d, #2e2e33);
+  background: radial-gradient(circle at top left, #1e1e24, #2e2e33);
   color: #f0f0f0;
   margin: 0;
   padding: 0;
   text-align: center;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   transition: background 0.3s ease, color 0.3s ease;
-}
-
-.banner {
-  width: 100%;
-  height: 500px;       /* adjust this to 250px if you want taller */
-  object-fit: cover;
-  margin: 0 auto;
-  display: block;
-}
-
-
-body.light-mode {
-  background: linear-gradient(120deg, #f0f0f0, #ffffff);
-  color: #111;
-}
-
-body.light-mode header,
-body.light-mode footer {
-  background-color: #f5f5f5;
-}
-
-body.light-mode nav button {
-  background-color: #ddd;
-  color: #111;
-}
-
-body.light-mode nav button:hover {
-  background-color: #007acc;
-  color: white;
-}
-
-body.light-mode #lang-toggle,
-body.light-mode #theme-toggle {
-  background-color: #e0e0e0;
-  color: #111;
-}
-
-body.light-mode .btn {
-  background-color: #444;
-}
-
-body.light-mode .btn:hover {
-  background-color: #000;
 }
 
 header, footer {
@@ -57,8 +15,36 @@ header, footer {
   padding: 20px;
 }
 
+/* HERO BANNER */
+.hero-banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-text h1 {
+  font-size: 2.8em;
+  margin-bottom: 0.2em;
+}
+
 nav {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 nav button {
@@ -68,8 +54,8 @@ nav button {
   border: none;
   background-color: #444;
   color: #f0f0f0;
-  transition: all 0.3s ease;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 nav button:hover {
@@ -80,7 +66,7 @@ nav button:hover {
 
 main .content {
   display: none;
-  padding: 20px;
+  padding: 40px 20px;
   animation: fadeIn 0.6s ease-in-out;
 }
 
@@ -89,36 +75,35 @@ main .active {
 }
 
 .project-img {
-  width: 18%;
-  max-width: 150px;
+  display: block;
   margin: 20px auto;
-  /*border: 2px solid #333;*/
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .oven-img {
-  width: 30%;        /* Change as needed */
-  max-width: 360px;
+  width: 55%;
+  max-width: 700px;
 }
 
 .gripper-img {
-  width: 21%;        /* Smaller for gripper */
-  max-width: 180px;
-}
-
-
-.project-img:hover {
-  transform: scale(1.03);
+  width: 35%;
+  max-width: 500px;
 }
 
 footer {
-  margin-top: 40px;
-  padding: 20px;
-  background: #222;
+  margin-top: 60px;
+  background: #1f1f1f;
   font-size: 14px;
+  padding: 30px 10px;
 }
 
+/* Buttons */
 .btn {
   background-color: #007acc;
   color: white;
@@ -134,6 +119,7 @@ footer {
   background-color: #005fa3;
 }
 
+/* Floating language/theme buttons */
 #lang-toggle,
 #theme-toggle {
   position: fixed;
@@ -155,13 +141,41 @@ footer {
 
 #theme-toggle {
   right: 120px;
-  background-color: #007acc;
+  background-color: #333;
   color: white;
 }
 
 #lang-toggle:hover,
 #theme-toggle:hover {
   transform: scale(1.05);
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #007acc;
+  padding: 15px 20px;
+  margin: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  border-radius: 6px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -45px;
+  font-size: 18px;
+  color: #007acc;
+  font-weight: bold;
 }
 
 @keyframes fadeIn {
@@ -173,3 +187,43 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Light mode override */
+body.light-mode {
+  background: linear-gradient(120deg, #f0f0f0, #ffffff);
+  color: #111;
+}
+
+body.light-mode header,
+body.light-mode footer {
+  background-color: #f5f5f5;
+}
+
+body.light-mode nav button {
+  background-color: #ddd;
+  color: #111;
+}
+
+body.light-mode nav button:hover {
+  background-color: #007acc;
+  color: white;
+}
+
+body.light-mode .btn {
+  background-color: #444;
+}
+
+body.light-mode .btn:hover {
+  background-color: #000;
+}
+
+body.light-mode #lang-toggle {
+  background-color: #444;
+  color: white;
+}
+
+body.light-mode #theme-toggle {
+  background-color: #e0e0e0;
+  color: #111;
+}
